@@ -1,0 +1,53 @@
+.card {
+    display: flex;
+    justify-content: center;
+    justify-self: center;;
+    margin: 4em;;
+    border: solid 1px #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: rgb(0, 0, 0, 0.7);
+    width: 80vw;
+}
+
+.cardNumber {
+    float: left;
+    margin-left: 32px;
+    font-size: 28px;
+    padding-right: 36px;
+    margin-bottom: 0;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: greenyellow;
+}
+
+.cardImage > img{
+    align-self: center;
+    flex-grow: 1;
+}
+
+.cardBody {
+    flex-grow: 1;
+    padding-right: 32px;
+    padding-left: 32px;
+}
+
+.cardBody > h1 {
+    text-align: center;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: greenyellow;
+    font-size: 2.5rem;
+}
+
+.cardBody > p {
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3rem;
+    color: greenyellow;
+    line-height: 1.5em;
+    letter-spacing: 0.125rem;
+}
