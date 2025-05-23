@@ -1,0 +1,168 @@
+/* shimmer-text.component.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000; /* Black background for space effect */
+    overflow: hidden;
+}
+
+
+.shimmer-text {
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    color: #2a4b6e; /* Dark steel blue base color */
+    background: linear-gradient(
+      90deg,
+      #2a4b6e 0%,
+      #3a6fa1 25%,
+      #5fb8ff 45%,
+      #ffffff 50%,
+      #ffa07a 55%,
+      #ff7f50 75%,
+      #2a4b6e 100%
+    );
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s infinite linear;
+    text-shadow: 0 0 10px rgba(95, 184, 255, 0.3);
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+      text-shadow: 0 0 10px rgba(95, 184, 255, 0.3);
+    }
+    50% {
+      text-shadow: 0 0 20px rgba(255, 127, 80, 0.5);
+    }
+    100% {
+      background-position: 200% 0;
+      text-shadow: 0 0 10px rgba(95, 184, 255, 0.3);
+    }
+  }
+  
+  /* Spaceship thruster effect - pulsing glow */
+  .shimmer-text-spaceship {
+    position: relative;
+    color: #2a4b6e;
+    background: linear-gradient(
+      90deg,
+      #2a4b6e 0%,
+      #3a6fa1 25%,
+      #5fb8ff 45%,
+      #ffffff 50%,
+      #ffa07a 55%,
+      #ff7f50 75%,
+      #2a4b6e 100%
+    );
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: spaceship-pulse 4s infinite ease-in-out;
+  }
+  
+  @keyframes spaceship-pulse {
+    0%, 100% {
+      background-position: -200% 0;
+      text-shadow: 0 0 5px rgba(95, 184, 255, 0.3),
+                   0 0 15px rgba(95, 184, 255, 0.2);
+      transform: scale(1);
+    }
+    25% {
+      text-shadow: 0 0 10px rgba(95, 184, 255, 0.5),
+                   0 0 20px rgba(95, 184, 255, 0.3),
+                   0 0 30px rgba(95, 184, 255, 0.2);
+    }
+    50% {
+      background-position: 0% 0;
+      text-shadow: 0 0 15px rgba(255, 127, 80, 0.6),
+                   0 0 25px rgba(255, 127, 80, 0.4),
+                   0 0 35px rgba(255, 127, 80, 0.2);
+      transform: scale(1.03);
+    }
+    75% {
+      text-shadow: 0 0 10px rgba(255, 127, 80, 0.5),
+                   0 0 20px rgba(255, 127, 80, 0.3);
+    }
+  }
+  
+  /* Variant for dark backgrounds */
+  .shimmer-text-dark {
+    background: linear-gradient(
+      90deg,
+      #3a6fa1 0%,
+      #5fb8ff 45%,
+      #ffffff 50%,
+      #ffa07a 55%,
+      #ff7f50 100%
+    );
+  }
+  
+  /* Variant for light backgrounds */
+  .shimmer-text-light {
+    background: linear-gradient(
+      90deg,
+      #2a4b6e 0%,
+      #3a6fa1 45%,
+      #5fb8ff 50%,
+      #ffa07a 55%,
+      #2a4b6e 100%
+    );
+  }
+  
+  /* Variant for different speeds */
+  .shimmer-text-slow {
+    animation-duration: 5s;
+  }
+  
+  .shimmer-text-fast {
+    animation-duration: 2s;
+  }
+  
+  /* Hero text with spaceship propulsion effect */
+  .hero-text {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    position: relative;
+    color: #2a4b6e;
+    background: linear-gradient(
+      90deg,
+      #2a4b6e 0%,
+      #3a6fa1 20%,
+      #5fb8ff 40%,
+      #ffffff 50%,
+      #ffa07a 60%,
+      #ff7f50 80%,
+      #2a4b6e 100%
+    );
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: hero-propulsion 4s infinite ease-in-out;
+  }
+  
+  @keyframes hero-propulsion {
+    0%, 100% {
+      background-position: -200% 0;
+      text-shadow: 0 0 10px rgba(95, 184, 255, 0.4),
+                   0 0 20px rgba(95, 184, 255, 0.2);
+    }
+    50% {
+      background-position: 0% 0;
+      text-shadow: 0 0 15px rgba(255, 127, 80, 0.6),
+                   0 0 30px rgba(255, 127, 80, 0.4),
+                   0 0 45px rgba(255, 127, 80, 0.2);
+    }
+  }
